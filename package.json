@@ -1,0 +1,19 @@
+{
+  "name": "neworday",
+  "version": "1.0.0",
+  "description": "New word for day",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/burik84/neworday.git"
+  },
+  "author": "burikAV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/burik84/neworday/issues"
+  },
+  "homepage": "https://github.com/burik84/neworday#readme"
+}
