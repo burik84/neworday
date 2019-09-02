@@ -14,7 +14,7 @@ word of the day with a description
 
 ### Инструменты
 Для практики:
-* css grid
+* css flex
 * gulp
 * webpack
 * scss
