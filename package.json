@@ -4,7 +4,8 @@
   "description": "New word for day",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,31 @@
   "bugs": {
     "url": "https://github.com/burik84/neworday/issues"
   },
-  "homepage": "https://github.com/burik84/neworday#readme"
+  "homepage": "https://github.com/burik84/neworday#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-if": "^3.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^4.12.0",
+    "node-sass-tilde-importer": "^1.0.2",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6"
+  },
+  "dependencies": {
+    "del": "^5.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "lodash": "^4.17.15",
+    "normalize.css": "^8.0.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "IE 10"
+  ]
 }
