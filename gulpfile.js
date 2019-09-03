@@ -45,7 +45,6 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const cleanCSS = require('gulp-clean-css');
 const htmlmin = require('gulp-htmlmin');
-const rigger = require('gulp-rigger');
 const gulpif = require('gulp-if');
 const tildeImporter = require('node-sass-tilde-importer');
 
@@ -59,7 +58,6 @@ function clean() {
 function html() {
     return gulp.src(paths.src.html)
         .pipe(plumber()) // отслеживание ошибок
-        .pipe(rigger()) //Прогоним через rigger
         .pipe(gulpif(isProd, htmlmin({
             collapseWhitespace: true
         })))
