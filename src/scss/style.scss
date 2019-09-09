@@ -1,1 +1,11 @@
 @import "~normalize.css/normalize";
+@import "fonts";
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background: #f4fffb;
+  font-family: 'Roboto';
+}
