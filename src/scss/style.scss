@@ -1,5 +1,7 @@
 @import "~normalize.css/normalize";
 @import "fonts";
+@import "variables";
+@import "block";
 
 html {
   font-size: 18px;
@@ -7,5 +9,36 @@ html {
 
 body {
   background: #f4fffb;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn {
+  color: $gray;
+  padding: 0.8rem;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: solid 1px transparent;
+  outline: none;
+
+  &:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+  }
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.5), 0 0 0 1.5px rgba(255, 105, 180, 0.5);
+  }
 }

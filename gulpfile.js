@@ -47,6 +47,7 @@ const cleanCSS = require('gulp-clean-css');
 const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
 const tildeImporter = require('node-sass-tilde-importer');
+const ttf2woff2 = require('gulp-ttf2woff2');
 
 sass.compiler = require('node-sass');
 
@@ -57,6 +58,7 @@ function clean() {
 
 function fonts() {
   return gulp.src(paths.src.fonts)
+    .pipe(ttf2woff2())
     .pipe(gulp.dest(paths.build.fonts)) // выкладывание готовых файлов
 }
 

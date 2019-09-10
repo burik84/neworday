@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.fix-block {
+  width: 60%;
+  background: rgba(255, 245, 245, 0.95);
+  min-height: 100%;
+}
+
+.footer,
+.header {
+  margin: 3rem;
+  display: flex;
+  justify-content: flex-end;
+
+  &__info {
+    color: $gray;
+    font-size: 0.8rem;
+    padding-right: 1rem;
+  }
+}
