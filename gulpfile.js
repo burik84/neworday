@@ -114,6 +114,7 @@ exports.styles = styles;
 exports.html = html;
 exports.watch = watch;
 exports.fonts = fonts;
+exports.img = img;
 
 // сборка
 gulp.task('build',
@@ -121,7 +122,8 @@ gulp.task('build',
     gulp.parallel(
       html,
       styles,
-      fonts
+      fonts,
+      img
     )
   )
 );

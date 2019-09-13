@@ -18,6 +18,30 @@
   &__info {
     color: $gray;
     font-size: 0.8rem;
-    padding-right: 1rem;
+    // padding-right: 1rem;
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.header {
+  &__text {
+    margin: auto 0.7rem;
+    height: 32px;
+    line-height: 30px;
+  }
+}
+
+.footer {
+  &__link {
+    margin: auto 0.7rem;
+    height: 32px;
+    line-height: 30px;
+
+    &-logo {
+      vertical-align: middle;
+      padding-right: 0.2rem;
+    }
   }
 }
