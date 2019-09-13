@@ -1,7 +1,20 @@
+// подключение файлов для работы
 @import "~normalize.css/normalize";
 @import "fonts";
-@import "variables";
-@import "block";
+@import "variables"; //
+//
+// Дополнительные настройки общие для страницы
+
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
 
 html {
   font-size: 18px;
@@ -42,3 +55,11 @@ button {
     // box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.5), 0 0 0 1.5px rgba(255, 105, 180, 0.5);
   }
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+// подключение стилей для блоков
+@import "block";
+@import "fix-block";
