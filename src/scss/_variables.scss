@@ -1,1 +1,13 @@
 $gray: #929292;
+$colorMain: rgba(255, 245, 245, 0.95);
+$colorSecondary: #F3FCFF;
+$grayLight: rgba(0, 0, 0, 0.541327);
+@mixin mainShadow {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+@mixin secondShadow {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+@mixin textBackgound {
+  color: #89B1CE;
+}
