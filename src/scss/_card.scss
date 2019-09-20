@@ -1,15 +1,22 @@
 .card {
+  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 880px;
+  height: 100%;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1432px;
+  }
 
   &__main {
     background-color: $colorMain;
     @include mainShadow;
     margin-bottom: 3rem;
-    width: 100%;
     max-width: 740px;
   }
 
@@ -31,6 +38,7 @@
     font-size: 1.1rem;
     line-height: 24px;
     padding: 20px;
+    flex-grow: 1;
 
     &-main {
       font-size: 1.3rem;
@@ -40,20 +48,33 @@
   &-section {
     padding: 0.3rem;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
 
     &__secondary {
       background-color: $colorSecondary;
       @include secondShadow;
+      max-width: 440px;
 
-      &:nth-child(odd) {
+      &:nth-child(even) {
         margin-left: 2rem;
       }
     }
   }
 
   &__btn {
+    position: absolute;
+    width: 214px;
+    height: 48px;
+    right: 0;
+    bottom: 0;
     margin-top: auto;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $buttonLight;
+    color: $buttonColor;
   }
 }

@@ -2,6 +2,8 @@ $gray: #929292;
 $colorMain: rgba(255, 245, 245, 0.95);
 $colorSecondary: #F3FCFF;
 $grayLight: rgba(0, 0, 0, 0.541327);
+$buttonLight: rgba(238, 198, 198, 0.1);
+$buttonColor: #765A5A;
 @mixin mainShadow {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
 }
