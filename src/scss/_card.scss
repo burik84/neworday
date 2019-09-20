@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  margin-bottom: 2rem;
 
   &-content {
     display: flex;
@@ -16,8 +17,8 @@
   &__main {
     background-color: $colorMain;
     @include mainShadow;
-    margin-bottom: 3rem;
     max-width: 740px;
+    margin-bottom: 4rem;
   }
 
   &__header {
@@ -38,7 +39,7 @@
     font-size: 1.1rem;
     line-height: 24px;
     padding: 20px;
-    flex-grow: 1;
+    margin-bottom: 3rem;
 
     &-main {
       font-size: 1.3rem;
@@ -56,10 +57,6 @@
       background-color: $colorSecondary;
       @include secondShadow;
       max-width: 440px;
-
-      &:nth-child(even) {
-        margin-left: 2rem;
-      }
     }
   }
 
