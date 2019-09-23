@@ -53,8 +53,16 @@ a {
   display: flex;
   flex-direction: row;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
 // подключение стилей для блоков
 @import "block";
 @import "fix-block";
 @import "card";
 @import "modal";
+@import "mobil";

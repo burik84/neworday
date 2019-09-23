@@ -15,18 +15,18 @@
 
 .header {
   &__text {
-    height: 32px;
+    height: 1.8rem;
     margin: auto 0.7rem;
     padding-top: 0.1rem;
-    line-height: 30px;
+    line-height: 1.8rem;
   }
 }
 
 .footer {
   &__link {
-    height: 32px;
+    height: 1.8rem;
     margin: auto 0.7rem;
-    line-height: 30px;
+    line-height: 1.8rem;
 
     &-logo {
       vertical-align: middle;
