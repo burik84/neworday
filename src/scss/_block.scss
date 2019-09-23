@@ -1,31 +1,31 @@
 .footer,
 .header {
-  margin: 2.4rem;
   display: flex;
   justify-content: flex-end;
+  margin: 2.4rem;
 
   &__info {
-    color: $gray;
-    font-size: 0.8rem;
-    // padding-right: 1rem;
-    vertical-align: middle;
     display: flex;
     flex-wrap: nowrap;
+    vertical-align: middle;
+    font-size: 0.8rem;
+    color: $gray;
   }
 }
 
 .header {
   &__text {
-    margin: auto 0.7rem;
     height: 32px;
+    margin: auto 0.7rem;
+    padding-top: 0.1rem;
     line-height: 30px;
   }
 }
 
 .footer {
   &__link {
-    margin: auto 0.7rem;
     height: 32px;
+    margin: auto 0.7rem;
     line-height: 30px;
 
     &-logo {

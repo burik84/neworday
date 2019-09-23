@@ -21,8 +21,8 @@ html {
 }
 
 body {
-  background: #f4fffb;
   font-family: 'Roboto', sans-serif;
+  background: #f4fffb;
 }
 
 a {
@@ -30,10 +30,10 @@ a {
 }
 
 .btn {
-  color: $gray;
   display: inline-block;
   text-align: center;
   text-decoration: none;
+  color: $gray;
   border: solid 1px transparent;
   outline: none;
   cursor: pointer;
