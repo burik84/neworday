@@ -52,13 +52,13 @@ a {
 .container {
   display: flex;
   flex-direction: row;
+  max-width: 100%;
 }
 
 .wrapper {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 0 auto;
   // @include modalShadow;
 }
 // подключение стилей для блоков

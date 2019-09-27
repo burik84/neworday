@@ -10,12 +10,14 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 1432px;
+    // max-width: 1432px;
   }
 
   &__main {
     max-width: 740px;
     margin-bottom: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     background-color: $colorMain;
     @include mainShadow;
   }
@@ -51,7 +53,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    padding: 0.3rem;
+    padding: 1rem;
 
     &__secondary {
       max-width: 440px;
