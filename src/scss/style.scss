@@ -59,6 +59,7 @@ a {
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
+  // @include modalShadow;
 }
 // подключение стилей для блоков
 @import "block";

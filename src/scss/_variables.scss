@@ -10,6 +10,10 @@ $buttonColor: #765A5A;
 @mixin secondShadow {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
 }
-@mixin textBackgound {
+@mixin modalShadow {
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.3);
+  filter:blur(10px);
+}
+@mixin textBackground {
   color: #89B1CE;
 }
