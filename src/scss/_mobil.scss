@@ -1,0 +1,56 @@
+@media screen and (min-width: 1520px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .fix-block {
+    width: 100%;
+    max-width: inherit;
+
+    &__header-h1 {
+      margin-top: 2rem;
+    }
+
+    &__header-h2 {
+      margin-bottom: 2rem;
+      text-align: left;
+      margin-left: 3rem;
+    }
+  }
+}
+@media screen and (max-width: 920px) {
+  .card {
+    margin-bottom: 5rem;
+
+    &__main {
+      margin: 0 auto;
+    }
+
+    &-section__secondary {
+      max-width: 40rem;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 10px;
+  }
+
+  .card {
+    margin-bottom: 3rem;
+
+    &-section__secondary {
+      margin: 0 auto 3rem;
+    }
+  }
+}
