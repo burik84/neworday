@@ -60,15 +60,6 @@ a {
   justify-content: center;
   flex-direction: column;
 }
-// .overlay {
-//   display: block;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   height: 100%;
-//   width: 100%;
-//   z-index: 10;
-// }
 // подключение стилей для блоков
 @import "block";
 @import "fix-block";
