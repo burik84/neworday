@@ -107,10 +107,12 @@ function watch() {
   });
   gulp.watch(paths.watch.html, html);
   gulp.watch(paths.watch.style, styles);
+  gulp.watch(paths.watch.js, script);
 };
 
 exports.clean = clean;
 exports.styles = styles;
+exports.script = script;
 exports.html = html;
 exports.watch = watch;
 exports.fonts = fonts;
@@ -123,7 +125,8 @@ gulp.task('build',
       html,
       styles,
       fonts,
-      img
+      img,
+      script
     )
   )
 );
