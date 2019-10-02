@@ -11,6 +11,16 @@
 
 <body>
 
+  <div class="overlay"></div>
+  <div class="modal" id="aboutProject">
+    <div class="modal-content">
+      <span class="close">x</span>
+      <h2 class="modal__header">О проекте</h2>
+      <p class="modal__text">Слова будут обновляться периодически, но не каждый день.</p>
+      <p class="modal__text">Все ссылки даются как есть, без каких либо обязательств.</p>
+      <p class="modal__text">По вопросам и предложениям пишите на <a href="#" class="btn btn-link">AVburik84@gmail.com</a></p>
+    </div>
+  </div>
   <div class="container">
     <div class="fix-block">
       <h1 class="fix-block__header fix-block__header-h1">Neworday</h1>
@@ -60,19 +70,12 @@
       <footer class="footer">
         <div class="footer__info">
           <a class="btn footer__link" href="https://github.com/burik84/neworday"><img class="footer__link-logo" src="./img/github.svg" alt="github logo"> burik84</a>
-          <a class="btn footer__link">О проекте</a>
+          <a class="btn footer__link" id="btn-about">О проекте</a>
         </div>
         <!-- /.footer__info -->
       </footer>
     </div>
 
-  </div>
-  <div class="modal" id="aboutProject">
-    <span class="close">x</span>
-    <h2 class="modal__header">О проекте</h2>
-    <p class="modal__text">Слова будут обновляться периодически, но не каждый день.</p>
-    <p class="modal__text">Все ссылки даются как есть, без каких либо обязательств.</p>
-    <p class="modal__text">По вопросам и предложениям пишите на <a href="#" class="btn btn-link">AVburik84@gmail.com</a></p>
   </div>
   <!-- /.about -->
   <script type="text/javascript" src="./js/main.js">
