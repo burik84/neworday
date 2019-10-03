@@ -10,15 +10,22 @@
 </head>
 
 <body>
-  <div class="modal" id="aboutProject">
+  <div class="modal" data-modal="modalAbout">
     <div class="modal-content">
-      <span class="close">x</span>
+      <span class="modal-close js-modal-close">Закрыть</span>
       <h2 class="modal__header">О проекте</h2>
-      <p class="modal__text">Слова будут обновляться периодически, но не каждый день.</p>
-      <p class="modal__text">Все ссылки даются как есть, без каких либо обязательств.</p>
-      <p class="modal__text">По вопросам и предложениям пишите на <a href="#" class="btn btn-link">AVburik84@gmail.com</a></p>
+      <div class="modal-text">
+        <p class="modal-text__desc">Слова будут обновляться периодически, но не каждый день.</p>
+        <p class="modal-text__desc">Все ссылки даются как есть, без каких либо обязательств.</p>
+        <p class="modal-text__desc">По вопросам и предложениям пишите на </p>
+        <a href="#" class="btn btn-link">avburik84@gmail.com</a>
+      </div>
+
     </div>
   </div>
+  <!-- Подложка под модальное окно -->
+  <div class="overlay" id="overlay-modal"></div>
+
   <div class="container">
     <div class="fix-block">
       <h1 class="fix-block__header fix-block__header-h1">Neworday</h1>
@@ -68,15 +75,15 @@
       <footer class="footer">
         <div class="footer__info">
           <a class="btn footer__link" href="https://github.com/burik84/neworday"><img class="footer__link-logo" src="./img/github.svg" alt="github logo"> burik84</a>
-          <a class="btn footer__link" id="btn-about">О проекте</a>
+          <a class="btn footer__link js-modal-open" id="btn-about">О проекте</a>
         </div>
         <!-- /.footer__info -->
       </footer>
     </div>
 
   </div>
-  <!-- /.about -->
-  <script type="text/javascript" src="./js/main.js">
+
+  <script type="text/javascript" src="./js/script.js">
 
   </script>
 </body>

@@ -29,9 +29,9 @@ var paths = {
 
 // для выбора режимов
 // режим отладки development
-let isDev = true;
+// let isDev = true;
 // режим production
-// let isDev = false;
+let isDev = false;
 let isProd = !isDev;
 
 const gulp = require('gulp');
@@ -45,6 +45,7 @@ const cleanCSS = require('gulp-clean-css');
 const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
 const tildeImporter = require('node-sass-tilde-importer');
+const concat = require('gulp-concat')
 
 sass.compiler = require('node-sass');
 
@@ -96,6 +97,8 @@ function script() {
       sourcemaps: true
     })
     .pipe(plumber())
+    .pipe(concat('script.js'))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.build.js)) // выкладывание готовых файлов
     .pipe(browserSync.stream()); // перезагрузим сервер
 }
