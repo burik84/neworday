@@ -45,9 +45,19 @@ const cleanCSS = require('gulp-clean-css');
 const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
 const tildeImporter = require('node-sass-tilde-importer');
-const concat = require('gulp-concat')
+const concat = require('gulp-concat');
+const postcss = require('gulp-postcss');
+const precss = require('precss');
+const gutil = require('gulp-util');
+const uglify = require('gulp-uglify');
 
 sass.compiler = require('node-sass');
+
+function onError(err) {
+  gutil.beep();
+  console.log(err);
+  this.emit('end');
+}
 
 // удаление папки сборки
 function clean() {
@@ -80,6 +90,11 @@ function styles() {
     .pipe(sass({
       importer: tildeImporter
     }).on('error', sass.logError)) // scss -> css + импорт из nodemodules c использованием ~
+    .pipe(
+      plumber({
+        errorHandler: onError
+      })
+    )
     .pipe(autoprefixer({ // добавим префиксы
       overrideBrowserslist: ['last 2 versions'],
       cascade: false
@@ -98,6 +113,7 @@ function script() {
     })
     .pipe(plumber())
     .pipe(concat('script.js'))
+    .pipe(gulpif(isProd, uglify()))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.build.js)) // выкладывание готовых файлов
     .pipe(browserSync.stream()); // перезагрузим сервер
