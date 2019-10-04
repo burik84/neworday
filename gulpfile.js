@@ -2,6 +2,13 @@
 
 /* пути к исходным файлам (src), к готовым файлам (build), а также к тем, за изменениями которых нужно наблюдать (watch) */
 var paths = {
+  prod: {
+    html: './',
+    js: './js/',
+    style: './style/',
+    img: './img/',
+    fonts: './fonts/'
+  },
   build: {
     html: 'build/',
     js: 'build/js/',
@@ -23,7 +30,8 @@ var paths = {
     js: 'src/js/**/*.js',
     style: 'src/scss/**/*.scss'
   },
-  clean: 'build',
+  // clean: 'build',
+  clean: ['./build', './index.html', './js/', './style/', './img/', './fonts/'],
   baseDir: 'build'
 };
 
@@ -66,12 +74,14 @@ function clean() {
 
 function fonts() {
   return gulp.src(paths.src.fonts)
-    .pipe(gulp.dest(paths.build.fonts)) // выкладывание готовых файлов
+    .pipe(gulpif(isDev, gulp.dest(paths.build.fonts))) // выкладывание готовых файлов
+    .pipe(gulpif(isProd, gulp.dest(paths.prod.fonts)))
 }
 
 function img() {
   return gulp.src(paths.src.img)
-    .pipe(gulp.dest(paths.build.img)) // выкладывание готовых файлов
+    .pipe(gulpif(isDev, gulp.dest(paths.build.img))) // выкладывание готовых файлов
+    .pipe(gulpif(isProd, gulp.dest(paths.prod.img)))
 }
 
 function html() {
@@ -80,7 +90,8 @@ function html() {
     .pipe(gulpif(isProd, htmlmin({
       collapseWhitespace: true
     })))
-    .pipe(gulp.dest(paths.build.html)) // выкладывание готовых файлов
+    .pipe(gulpif(isDev, gulp.dest(paths.build.html))) // выкладывание готовых файлов
+    .pipe(gulpif(isProd, gulp.dest(paths.prod.html)))
     .pipe(browserSync.stream()); // перезагрузка сервера
 }
 
@@ -103,7 +114,8 @@ function styles() {
       level: 1
     })))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.build.style)) // выгружаем в build
+    .pipe(gulpif(isDev, gulp.dest(paths.build.style))) // выгружаем в build
+    .pipe(gulpif(isProd, gulp.dest(paths.prod.style)))
     .pipe(browserSync.stream()); // перезагрузим сервер
 }
 
@@ -115,7 +127,8 @@ function script() {
     .pipe(concat('script.js'))
     .pipe(gulpif(isProd, uglify()))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.build.js)) // выкладывание готовых файлов
+    .pipe(gulpif(isDev, gulp.dest(paths.build.js))) // выкладывание готовых файлов
+    .pipe(gulpif(isProd, gulp.dest(paths.prod.js)))
     .pipe(browserSync.stream()); // перезагрузим сервер
 }
 
