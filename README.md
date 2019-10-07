@@ -1,8 +1,7 @@
 # neworday
 word of the day with a description
 
-Готовый [проект][link].<br>
-Проект на [githube][link-github].
+Готовый [проект][link]
 
 [link]:https://burik84.github.io/neworday/
 [link-github]:https://github.com/burik84/neworday
